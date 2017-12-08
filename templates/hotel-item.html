@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SIGNIN</title>
+        <!--meta tags-->
+        <meta name="content-type" content="text/html charset=utf-8" />
+        <meta http-equiv="content-type" content="text/html charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="description about project meta tag"/>
+        <meta name="keywords" content="keyword part about my project,testing keyword"/>
+        <meta name="distribution" content="global"/>
+        <meta name="content-language" content="en"/>
+        <meta name="language" content="en"/>
+        <link rel="stylesheet" href="css/materialize.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="css/materialdesignicons.min.css"/>
+        <link rel="shortcut icon" href="img/icons/fav.png" type="image/x-icon"/>
+        <link type="text/css" href="css/style.css" rel="stylesheet"/>
+        <link type="text/css" href="css/responsive.css" rel="stylesheet"/>
+        <!--select2-->
+        <link type="text/css" href="select2/css/select2.css" rel="stylesheet"/>
+        <link type="text/css" href="css/jquery.datetimepicker.css" rel="stylesheet"/>
+    </head>
+    <body>
+    <div class="row item_cover">
+        <p class="hotel-name">Hilton Hotel Budapest by Library Hotel Collection</p>
+        <p class="card-rating">
+                       <span class="left">
+                           <!--mdi_star versen rengi sari olacaq-->
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star-half  mdi_star"></span>
+                           <span class="mdi mdi-star "></span>
+                           <!--mdi-star-half-->
+                           <span class="mdi mdi_star"></span>
+                       </span>
+            <a href="javascript:void(0)" class="card-review-count">2322 reviews</a>
+        </p>
+        <ul>
+            <li><p class="hotel-info"><i class="mdi mdi-map-marker-multiple"></i>5 Hercegprimas Street, Budapest 1051, Hungary</p></li>
+            <li><p class="hotel-info"><i class="mdi mdi-phone"></i>00 36 1 445 4055</p></li>
+        </ul>
+    </div>
+    <div class="row hotel-details">
+        <div class="col m5 hotel-item-left">
+            <p class="reservation-title">Reservation</p>
+            <form action="">
+                <div class="row">
+                    <div class="col m6">
+                        <div class="datetime-picker item-date">
+                            <input type="text" id="datetimepicker4" value="28 SEP 2017"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m6">
+                        <div class="datetime-picker item-date">
+                            <input type="text" id="datetimepicker5" value="28 SEP 2017"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m6 guest_item">
+                        <input  type="number" class="validate" placeholder="number of rooms">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m6 guest_item">
+                        <input  type="number" class="validate" placeholder="number of rooms">
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="javascript:void(0)">
+
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="javascript:void(0)" class="btn reserve-btn">Reserve</a>
+                </div>
+            </form>
+        </div>
+        <div class="col m7 hotel-item-right">
+            <div class="hotel-img z-depth-2">
+
+            </div>
+        </div>
+    </div>
+    <!--the start of home footer-->
+    <div class="row footer center-align">
+        <div class="col xl12 l12 m12 s12">
+            <p class="copyright-txt">© 2017. All rights reserved by BestReservations </p>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!--material design js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--own js file-->
+    <script type="text/javascript" src="js/main.js"></script>
+    <!--select2-->
+    <script src="select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.datetimepicker.full.min.js"></script>
+    <script>
+        $('select').select2();
+        $(".button-collapse").sideNav({
+            closeOnClick: true
+        });
+
+    </script>
+</body>
+</html>

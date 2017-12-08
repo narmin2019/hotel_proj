@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HOME</title>
+        <!--meta tags-->
+        <meta name="content-type" content="text/html charset=utf-8" />
+        <meta http-equiv="content-type" content="text/html charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="description" content="description about project meta tag"/>
+        <meta name="keywords" content="keyword part about my project,testing keyword"/>
+        <meta name="distribution" content="global"/>
+        <meta name="content-language" content="en"/>
+        <meta name="language" content="en"/>
+        <link rel="stylesheet" href="css/materialize.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <link rel="stylesheet" href="css/materialdesignicons.min.css"/>
+        <link rel="shortcut icon" href="img/icons/fav.png" type="image/x-icon"/>
+        <link type="text/css" href="css/style.css" rel="stylesheet"/>
+        <link type="text/css" href="css/responsive.css" rel="stylesheet"/>
+        <link type="text/css" href="css/jquery.datetimepicker.css" rel="stylesheet"/>
+        <!--select2-->
+        <link type="text/css" href="select2/css/select2.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!--the start of restaurant-home-->
+        <div class="row home">
+            <div class="col xl12 l12 m12 s12 home-cover rl-zero-padding">
+                <nav>
+                    <div class="nav-wrapper">
+                        <a href="javascript:void(0)" data-activates="mobile-demo" class="button-collapse black-text"><i class="mdi mdi-menu"></i></a>
+
+                        <a href="javascript:void(0)" data-activates="mobile-demo" class="logo-text hide-on-large-only">LOGO</a>
+
+                        <ul class="hide-on-med-and-down menu-list">
+                            <li><b class="logo_main">LOGO</b></li>
+                            <li><a href="javascript:void(0)" class="active">Hotels</a></li>
+                            <li><a href="javascript:void(0)">Reservations</a></li>
+                        </ul>
+
+                        <!--the start of menu for mobile-->
+                        <div class="side-nav" id="mobile-demo">
+                            <div class="col s12">
+                                <a href="javascript:void(0)" data-activates="mobile-demo" class="logo-text">RES<span>T</span>LUX</a>
+                            </div>
+                            <div class="col s12 sign_in_up">
+                                <a href="sign-page.html" class="btn sign-in-btn">Signin/Signup</a>
+                            </div>
+                            <div class="row mobile-username">
+                                <a href="javascript:void(0)">
+                                    <img class="user-img" src="img/icons/account-circle.svg" alt="user-img">
+                                    <span>Nuriyya Ruslanova</span>
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 title-mob">My Account</div>
+                                <div class="col s12 rl-zero-padding">
+                                    <ul class="side-menu-list">
+                                        <li><a href="javascript:void(0)">View Profile</a></li>
+                                        <li><a href="javascript:void(0)">Bookings</a></li>
+                                        <li><a href="javascript:void(0)">Rental inbox</a></li>
+                                        <li><a href="javascript:void(0)">Notifications</a></li>
+                                        <li><a href="javascript:void(0)">Account info</a></li>
+                                        <li><a href="javascript:void(0)">Sign out</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col s12 title-mob">Setting</div>
+                                <div class="col s12 rl-zero-padding">
+                                    <ul class="side-menu-list">
+                                        <li>
+                                            <div class="row">
+                                                <div class="col s6 lng_mob">
+                                                    <span>Language</span>
+                                                </div>
+                                                <div class="col s6 right-align">
+                                                    <div class="lang-li mobil_drop">
+                                                        <a class='btn dropdown-button' href='javascript:void(0)' data-activates='lang_mobile'>ENG<i class="material-icons right arrow-drop">arrow_drop_down</i>
+                                                        </a>
+                                                        <ul id='lang_mobile' class='dropdown-content '>
+                                                            <li>
+                                                                <a class="drop-link" href="javascript:void(0)">
+                                                                    <span>ENG</span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="drop-link" href="javascript:void(0)">
+                                                                    <span>RUS</span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a class="drop-link" href="javascript:void(0)">
+                                                                    <span>AZE</span>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col s6 lng_mob">
+                                                    <span>Currency</span>
+                                                </div>
+                                                <div class="col s6 right-align">
+                                                    <div class="lang-li mobil_drop">
+                                                        <a class='dropdown-button btn' href='javascript:void(0)' data-activates='dropdown-val_mob'>USD<i class="material-icons right arrow-drop">arrow_drop_down</i>
+                                                        </a>
+                                                        <ul id='dropdown-val_mob' class='dropdown-content'>
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span>USD</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span>RUB</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span>AZN</span>
+                                                            </a>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col s12 title-mob">Beneficial link</div>
+                                <div class="col s12 rl-zero-padding">
+                                    <ul class="side-menu-list">
+                                        <li><a href="javascript:void(0)">Help</a></li>
+                                        <li><a href="javascript:void(0)">Faq</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--the end of menu for mobile-->
+
+                        <!--the start of menu right part-->
+                        <ul class="right menu-right hide-on-small-only hide-on-med-only">
+                            <li><a href="sign-page.html" class="btn sign-in-btn">Sign in</a></li>
+                            <li><a href="register-page.html" class="btn sign-in-btn">Register</a></li>
+
+                            <!--registered user-->
+                            <li class="user-li">
+                                <a href="javascript:void(0)" class="dropdown-button btn" data-activates='dropdown-profil'>
+                                    <span>Nuriyya R.</span>
+                                    <i class="material-icons right arrow-drop">arrow_drop_down</i>
+                                </a>
+                                <ul id='dropdown-profil' class='dropdown-content'>
+                                    <li class="profil-deails"><a href="#">View Profile</a></li>
+                                    <li class="profil-deails"><a href="#">Sign out</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <!--the end of menu right part-->
+                    </div>
+                </nav>
+                <!--the start of home content for restaurant-->
+               <div class="row search-cov">
+                   <div class="col m12 rest-home rl-zero-padding left">
+                       <h4 class="restaurant-head center-align hide-on-small-only hide-on-med-only">FIND YOUR HOTELS !</h4>
+                       <div class="row search-area z-depth-5">
+                           <div class="col m3 input-field common-search">
+                               <i class="material-icons prefix">search</i>
+                               <input id="icon_prefix" type="text" class="validate" placeholder="Region">
+                           </div>
+                           <div class="col m4 date-date rl-zero-padding">
+                               <ul class="date-time-picker picker_date_cover">
+                                   <li>
+                                       <div class="datetime-picker picker_date">
+                                           <p>Start date</p>
+                                           <input type="text" id="datetimepicker4" value="28 SEP 2017"/>
+                                           <i class="mdi mdi-calendar datetime-icon right"></i>
+                                       </div>
+                                   </li>
+                                   <li>
+                                       <div class="datetime-picker picker_date">
+                                           <p>End date</p>
+                                           <input type="text" id="datetimepicker5" value="28 SEP 2017"/>
+                                           <i class="mdi mdi-calendar datetime-icon right"></i>
+                                       </div>
+                                   </li>
+                               </ul>
+                           </div>
+                           <div class="col m3 max-min-prize">
+                               <ul>
+                                   <li><input  type="number" class="validate" placeholder="min prize"></li>
+                                   <li><input type="number" class="validate" placeholder="max prize"></li>
+                               </ul>
+                           </div>
+                           <div class="col m2">
+                               <a href="javascript:void(0)" class="btn search_btn">Search</a>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                <!--the end of home content for restaurant-->
+            </div>
+        </div>
+        <!--the end of restaurant home-->
+
+        <!--the start of recently restaurant body-->
+        <div class="row hotel-content" id="hotel-content">
+            <div class="col xl12 l12 m12 s12">
+                <p class="content-head">Top Hotels</p>
+            </div>
+            <!--hotel cells: repeat etsen tekrarlanacaq bunu-->
+            <div class="col xl3 l3 m6 s12 rest-cell">
+                <div class="rest-container">
+                    <div class="rest-img-container">
+                        <a href="javascript:void(0)">
+                            <img width="600" height="200" src="img/hotel-item.jpg" class="rest-image" alt="rest-img"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="info-restaurant">
+                    <h4 class="rest-card-title">
+                        <a href="javascript:void(0)">The elements cafe</a>
+                    </h4>
+                    <p class="rest-place">Baku.Azerbaijan</p>
+                    <p class="card-rating">
+                       <span class="left">
+                           <span class="rate-label">3.1</span>
+                           <span class="mdi mdi-star"></span>
+                           <span class="mdi mdi-star"></span>
+                           <span class="mdi mdi-star"></span>
+                           <span class="mdi mdi-star"></span>
+                           <span class="mdi mdi-star-half"></span>
+                       </span>
+                        <a href="javascript:void(0)" class="card-review-count right">2322 reviews</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <!--the end of recently restaurant body-->
+
+        <!--the start of home footer-->
+        <div class="row footer center-align">
+            <div class="col xl12 l12 m12 s12">
+                <p class="copyright-txt">© 2017. All rights reserved by BestReservations </p>
+            </div>
+        </div>
+        <a href="#" class="scrollToTop mdi mdi-chevron-up" style="text-decoration: none; display: inline;"></a>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <!--material design js-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!--own js file-->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.datetimepicker.full.min.js"></script>
+    <!--select2-->
+    <script src="select2/js/select2.min.js"></script>
+
+</body>
+</html>
