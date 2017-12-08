@@ -33,7 +33,7 @@ class Hotel(models.Model):
     photo = models.ImageField('Şəkil')
     room_capacity = models.IntegerField(default=50, verbose_name="Nömrələrin sayı")
     guest_capacity = models.IntegerField(default=80, verbose_name="Nömrələrin sayı")
-    contact_info = models.TextField(max_length=500)
+    contact_info = models.TextField(max_length=500, blank=True)
 
     class Meta:
         verbose_name='Otel'
