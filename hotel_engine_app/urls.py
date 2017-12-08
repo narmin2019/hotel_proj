@@ -1,6 +1,9 @@
 from django.conf.urls import url, include
 from . import views
-urlpatterns = [
-    url(r'^(?:home)?$', views.home, name='home')
 
+urlpatterns = [
+    url(r'^(?:search)?$', views.Home.as_view(), name='home'),
+    url(r'^register$', views.Register.as_view(), name='register'),
+    url(r'^login$', views.Login.as_view(), name='login'),
+    url('r^hotel/(?P<hotel_id>\d+)$', views.Hotel.as_view(), name='hotel')
 ]
