@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SIGNIN</title>
+        <title>Hotel details</title>
         <!--meta tags-->
         <meta name="content-type" content="text/html charset=utf-8" />
         <meta http-equiv="content-type" content="text/html charset=utf-8" />
@@ -11,15 +11,17 @@
         <meta name="distribution" content="global"/>
         <meta name="content-language" content="en"/>
         <meta name="language" content="en"/>
-        <link rel="stylesheet" href="css/materialize.min.css"/>
+        <link rel="stylesheet" href="static/css/materialize.min.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-        <link rel="stylesheet" href="css/materialdesignicons.min.css"/>
-        <link rel="shortcut icon" href="img/icons/fav.png" type="image/x-icon"/>
-        <link type="text/css" href="css/style.css" rel="stylesheet"/>
-        <link type="text/css" href="css/responsive.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="static/css/materialdesignicons.min.css"/>
+        <link rel="shortcut icon" href="static/img/icons/fav.png" type="image/x-icon"/>
+        <link type="text/css" href="static/css/style.css" rel="stylesheet"/>
+        <link type="text/css" href="static/css/responsive.css" rel="stylesheet"/>
+        <link type="text/css" href="static/css/nice-select.css" rel="stylesheet"/>
+        <link type="text/css" href="static/css/nice-select.css" rel="stylesheet"/>
         <!--select2-->
-        <link type="text/css" href="select2/css/select2.css" rel="stylesheet"/>
-        <link type="text/css" href="css/jquery.datetimepicker.css" rel="stylesheet"/>
+        <link type="text/css" href="static/select2/css/select2.css" rel="stylesheet"/>
+        <link type="text/css" href="static/css/jquery.datetimepicker.css" rel="stylesheet"/>
     </head>
     <body>
     <div class="row item_cover">
@@ -41,14 +43,16 @@
             <li><p class="hotel-info"><i class="mdi mdi-map-marker-multiple"></i>5 Hercegprimas Street, Budapest 1051, Hungary</p></li>
             <li><p class="hotel-info"><i class="mdi mdi-phone"></i>00 36 1 445 4055</p></li>
         </ul>
+        <a href="javascript:void(0)" class="hotel-cost btn"><span>$</span>&nbsp;348</a>
     </div>
     <div class="row hotel-details">
-        <div class="col m5 hotel-item-left">
+        <div class="col m3 hotel-item-left">
             <p class="reservation-title">Reservation</p>
             <form action="">
                 <div class="row">
                     <div class="col m6">
                         <div class="datetime-picker item-date">
+                            <p class="date-title">From</p>
                             <input type="text" id="datetimepicker4" value="28 SEP 2017"/>
                         </div>
                     </div>
@@ -56,6 +60,7 @@
                 <div class="row">
                     <div class="col m6">
                         <div class="datetime-picker item-date">
+                            <p class="date-title">To</p>
                             <input type="text" id="datetimepicker5" value="28 SEP 2017"/>
                         </div>
                     </div>
@@ -80,9 +85,144 @@
                 </div>
             </form>
         </div>
-        <div class="col m7 hotel-item-right">
-            <div class="hotel-img z-depth-2">
-
+        <div class="col m9 hotel-item-right">
+            <div class="hotel-img"></div>
+        </div>
+    </div>
+    <div class="row comment-part">
+        <!--comments-->
+        <div class="col m8">
+            <div class="row comments write-cmt">
+                <div class="col m2 cmt-left">
+                    <a href="javascript:void(0)"><img src="static/img/avatar.jpg" alt="" class="comment-img" width="60" height="60"></a>
+                </div>
+                <div class="col m6 cmt-right">
+                    <form action="">
+                        <input type="text" placeholder="add your opinion about hotel">
+                    </form>
+                </div>
+                <div class="col m1 s12 write-cnt">
+                    <select class="ignore right">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="col m3 s12 write-review">
+                    <a href="javascript:void(0)" class="btn">write a review</a>
+                </div>
+            </div>
+            <!--te start of comment item-->
+            <div class="row comments">
+                <div class="col m2 cmt-left">
+                    <a href="javascript:void(0)"><img src="static/img/avatar.jpg" alt="" class="comment-img" width="60" height="60"></a>
+                    <p class="comment-name">Chris Evans</p>
+                    <p class="comment-name">Baku,Azerbaijan</p>
+                </div>
+                <div class="col m10 cmt-right">
+                    <p class="card-rating">
+                       <span class="left">
+                           <!--mdi_star versen rengi sari olacaq-->
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star-half  mdi_star"></span>
+                           <span class="mdi mdi-star "></span>
+                           <!--mdi-star-half-->
+                           <span class="mdi mdi_star"></span>
+                       </span>
+                        <span class="reviewed">Reveiwed yesterday</span>
+                    </p>
+                    <p class="cmt-hotel-title">Lovely hotel in great location</p>
+                    <p class="cmt-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet asperiores aspernatur commodi consectetur dolores eaque eligendi enim eos, eum ex fugit impedit ipsa libero nostrum obcaecati officiis optio voluptas!</p>
+                </div>
+            </div>
+            <!--the end of comment item-->
+            <div class="row comments">
+                <div class="col m2 cmt-left">
+                    <a href="javascript:void(0)"><img src="static/img/avatar.jpg" alt="" class="comment-img" width="60" height="60"></a>
+                    <p class="comment-name">Chris Evans</p>
+                    <p class="comment-name">Baku,Azerbaijan</p>
+                </div>
+                <div class="col m10 cmt-right">
+                    <p class="card-rating">
+                       <span class="left">
+                           <!--mdi_star versen rengi sari olacaq-->
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star-half  mdi_star"></span>
+                           <span class="mdi mdi-star "></span>
+                           <!--mdi-star-half-->
+                           <span class="mdi mdi_star"></span>
+                       </span>
+                        <span class="reviewed">Reveiwed yesterday</span>
+                    </p>
+                    <p class="cmt-hotel-title">Lovely hotel in great location</p>
+                    <p class="cmt-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet asperiores aspernatur commodi consectetur dolores eaque eligendi enim eos, eum ex fugit impedit ipsa libero nostrum obcaecati officiis optio voluptas!</p>
+                </div>
+            </div>
+            <div class="row comments">
+                <div class="col m2 cmt-left">
+                    <a href="javascript:void(0)"><img src="static/img/avatar.jpg" alt="" class="comment-img" width="60" height="60"></a>
+                    <p class="comment-name">Chris Evans</p>
+                    <p class="comment-name">Baku,Azerbaijan</p>
+                </div>
+                <div class="col m10 cmt-right">
+                    <p class="card-rating">
+                       <span class="left">
+                           <!--mdi_star versen rengi sari olacaq-->
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star-half  mdi_star"></span>
+                           <span class="mdi mdi-star "></span>
+                           <!--mdi-star-half-->
+                           <span class="mdi mdi_star"></span>
+                       </span>
+                        <span class="reviewed">Reveiwed yesterday</span>
+                    </p>
+                    <p class="cmt-hotel-title">Lovely hotel in great location</p>
+                    <p class="cmt-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet asperiores aspernatur commodi consectetur dolores eaque eligendi enim eos, eum ex fugit impedit ipsa libero nostrum obcaecati officiis optio voluptas!</p>
+                </div>
+            </div>
+            <div class="row comments">
+                <div class="col m2 cmt-left">
+                    <a href="javascript:void(0)"><img src="static/img/avatar.jpg" alt="" class="comment-img" width="60" height="60"></a>
+                    <p class="comment-name">Chris Evans</p>
+                    <p class="comment-name">Baku,Azerbaijan</p>
+                </div>
+                <div class="col m10 cmt-right">
+                    <p class="card-rating">
+                       <span class="left">
+                           <!--mdi_star versen rengi sari olacaq-->
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star mdi_star"></span>
+                           <span class="mdi mdi-star-half  mdi_star"></span>
+                           <span class="mdi mdi-star "></span>
+                           <!--mdi-star-half-->
+                           <span class="mdi mdi_star"></span>
+                       </span>
+                        <span class="reviewed">Reveiwed yesterday</span>
+                    </p>
+                    <p class="cmt-hotel-title">Lovely hotel in great location</p>
+                    <p class="cmt-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid amet asperiores aspernatur commodi consectetur dolores eaque eligendi enim eos, eum ex fugit impedit ipsa libero nostrum obcaecati officiis optio voluptas!</p>
+                </div>
+            </div>
+            <!--pagination-->
+            <div class="row center-align pag-counts">
+                <ul class="pagination">
+                    <li class="disabled"><a href="javascript:void(0)">previous</a></li>
+                    <li class="active"><a href="javascript:void(0)">1</a></li>
+                    <li class="waves-effect"><a href="javascript:void(0)">2</a></li>
+                    <li class="waves-effect"><a href="javascript:void(0)">3</a></li>
+                    <li class="waves-effect"><a href="javascript:void(0)">4</a></li>
+                    <li class="waves-effect"><a href="javascript:void(0)">5</a></li>
+                    <li class="waves-effect"><a href="javascript:void(0)">next</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -92,20 +232,20 @@
             <p class="copyright-txt">© 2017. All rights reserved by BestReservations </p>
         </div>
     </div>
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
     <!--material design js-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="static/js/materialize.min.js"></script>
     <!--own js file-->
-    <script type="text/javascript" src="js/main.js"></script>
-    <!--select2-->
-    <script src="select2/js/select2.min.js"></script>
-    <script type="text/javascript" src="js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript" src="static/js/jquery.nice-select.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.datetimepicker.full.min.js"></script>
     <script>
-        $('select').select2();
         $(".button-collapse").sideNav({
             closeOnClick: true
         });
-
+        $(document).ready(function() {
+            $('select').niceSelect();
+        });
     </script>
 </body>
 </html>

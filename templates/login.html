@@ -20,12 +20,40 @@
     <!--select2-->
     <link type="text/css" href="static/select2/css/select2.css" rel="stylesheet"/>
 </head>
-    <body>
+    <body class="covered-body">
+        <nav class="log-nav">
+            <div class="nav-wrapper">
+                <a href="home.html" class="button-collapse black-text"><i class="mdi mdi-menu"></i></a>
+                <ul class="hide-on-med-and-down menu-list">
+                    <li>
+                        <a href="javascript:void(0)">
+                            <img src="static/img/icons/logo.png" alt="logo" class="hotel-logo">
+                        </a>
+                    </li>
+                </ul>
+                <!--the start of menu right part-->
+                <ul class="right menu-right">
+                    <!--registered user-->
+                    <li class="user-li">
+                        <a href="javascript:void(0)" class="dropdown-button btn" data-activates='dropdown-profil'>
+                            <span>Nuriyya R.</span>
+                            <i class="material-icons right arrow-drop">arrow_drop_down</i>
+                        </a>
+                        <ul id='dropdown-profil' class='dropdown-content'>
+                            <li class="profil-deails"><a href="#">View Profile</a></li>
+                            <li class="profil-deails"><a href="#">Sign out</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <!--the end of menu right part-->
+            </div>
+        </nav>
         <div class="row sign-page">
             <!--the start of sign in-->
             <div class="col m4 offset-m4">
                 <div class="row">
-                    <div class="col xl12 l12 m12 s12 m-right">
+                    <div class="col xl12 l12 m12 s12 m-right z-depth-4">
                         <a href="javascript:void(0)" class="close-popup hide-on-large-only"><i class="mdi mdi-close black-text"></i></a>
                         <p class="login-right-title">Sign in to your account</p>
                         <form action="">
@@ -51,19 +79,19 @@
             </div>
             <!--the end of sign in-->
         </div>
-    <script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
-    <!--material design js-->
-    <script type="text/javascript" src="static/js/materialize.min.js"></script>
-    <!--own js file-->
-    <script type="text/javascript" src="static/js/main.js"></script>
-    <!--select2-->
-    <script src="static/select2/js/select2.min.js"></script>
-    <script type="text/javascript" src="static/js/owl.carousel.min.js"></script>
-    <script>
-        $(".button-collapse").sideNav({
-            closeOnClick: true
-        });
+        <script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+        <!--material design js-->
+        <script type="text/javascript" src="static/js/materialize.min.js"></script>
+        <!--own js file-->
+        <script type="text/javascript" src="static/js/main.js"></script>
+        <!--select2-->
+        <script src="static/select2/js/select2.min.js"></script>
+        <script type="text/javascript" src="static/js/owl.carousel.min.js"></script>
+        <script>
+            $(".button-collapse").sideNav({
+                closeOnClick: true
+            });
 
-    </script>
+        </script>
 </body>
 </html>
