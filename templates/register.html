@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <title>REGISTER</title>
     <!--meta tags-->
     <meta name="content-type" content="text/html charset=utf-8" />
@@ -20,60 +20,87 @@
     <!--select2-->
     <link type="text/css" href="static/select2/css/select2.css" rel="stylesheet"/>
 </head>
-<body>
-<div class="row register-page">
-    <!--the start of sign in-->
-    <div class="col m4 offset-m4">
-        <div class="row">
-            <div class="col xl12 l12 m12 s12 m-right">
-                <a href="javascript:void(0)" class="close-popup hide-on-large-only"><i class="mdi mdi-close black-text"></i></a>
-                <p class="login-right-title">Register now!</p>
-                <form action="">
-                    <div class="input_field">
-                        <label>Name</label>
-                        <input placeholder="name" type="text" class="validate">
-                    </div>
-                    <div class="input_field">
-                        <label>Phone</label>
-                        <input placeholder="+994" type="text" class="validate">
-                    </div>
-                    <div class="input_field">
-                        <label>Surname</label>
-                        <input placeholder="surname" type="text" class="validate">
-                    </div>
-                    <div class="input_field">
-                        <label>Email</label>
-                        <input placeholder="example@mail.ru" type="email" class="validate">
-                    </div>
-                    <div class="input_field">
-                        <label>Password</label>
-                        <input placeholder="password" type="password" class="validate">
-                    </div>
-                </form>
+    <body class="covered-body">
+        <nav class="log-nav">
+            <div class="nav-wrapper">
+                <a href="javascript:void(0)" class="button-collapse black-text"><i class="mdi mdi-menu"></i></a>
+                <ul class="hide-on-med-and-down menu-list">
+                    <li>
+                        <a href="home.html">
+                            <img src="static/img/icons/logo.png" alt="logo" class="hotel-logo">
+                        </a>
+                    </li>
+                </ul>
+                <!--the start of menu right part-->
+                <ul class="right menu-right">
+                    <!--registered user-->
+                    <li class="user-li">
+                        <a href="javascript:void(0)" class="dropdown-button btn" data-activates='dropdown-profil'>
+                            <span>Nuriyya R.</span>
+                            <i class="material-icons right arrow-drop">arrow_drop_down</i>
+                        </a>
+                        <ul id='dropdown-profil' class='dropdown-content'>
+                            <li class="profil-deails"><a href="#">View Profile</a></li>
+                            <li class="profil-deails"><a href="#">Sign out</a></li>
+                        </ul>
+                    </li>
 
-                <a href="javascript:void(0)" class="btn log-btn">Register</a> <br>
-                <p class="center-align custom-log">
-                    <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-                    <label for="filled-in-box">Are you manager?</label>
-                </p>
+                </ul>
+                <!--the end of menu right part-->
             </div>
-        </div>
-    </div>
-    <!--the end of sign in-->
-</div>
-<script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
-<!--material design js-->
-<script type="text/javascript" src="static/js/materialize.min.js"></script>
-<!--own js file-->
-<script type="text/javascript" src="static/js/main.js"></script>
-<!--select2-->
-<script src="static/select2/js/select2.min.js"></script>
-<script type="text/javascript" src="static/js/owl.carousel.min.js"></script>
-<script>
-    $(".button-collapse").sideNav({
-        closeOnClick: true
-    });
+        </nav>
+        <div class="row register-page">
+            <!--the start of sign in-->
+            <div class="col m4 offset-m4">
+                <div class="row">
+                    <div class="col xl12 l12 m12 s12 m-right z-depth-4">
+                        <a href="javascript:void(0)" class="close-popup hide-on-large-only"><i class="mdi mdi-close black-text"></i></a>
+                        <p class="login-right-title">Register now!</p>
+                        <form action="">
+                            <div class="input_field">
+                                <label>Name</label>
+                                <input placeholder="name" type="text" class="validate">
+                            </div>
+                            <div class="input_field">
+                                <label>Phone</label>
+                                <input placeholder="+994" type="text" class="validate">
+                            </div>
+                            <div class="input_field">
+                                <label>Surname</label>
+                                <input placeholder="surname" type="text" class="validate">
+                            </div>
+                            <div class="input_field">
+                                <label>Email</label>
+                                <input placeholder="example@mail.ru" type="email" class="validate">
+                            </div>
+                            <div class="input_field">
+                                <label>Password</label>
+                                <input placeholder="password" type="password" class="validate">
+                            </div>
+                        </form>
 
-</script>
-</body>
+                        <a href="javascript:void(0)" class="btn log-btn">Register</a> <br>
+                        <p class="custom-log">
+                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                            <label for="filled-in-box" class="left">Are you manager?</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--the end of sign in-->
+        </div>
+        <script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+        <!--material design js-->
+        <script type="text/javascript" src="static/js/materialize.min.js"></script>
+        <!--own js file-->
+        <script type="text/javascript" src="static/js/main.js"></script>
+        <!--select2-->
+        <script src="static/select2/js/select2.min.js"></script>
+        <script type="text/javascript" src="static/js/owl.carousel.min.js"></script>
+        <script>
+            $(".button-collapse").sideNav({
+                closeOnClick: true
+            });
+        </script>
+    </body>
 </html>

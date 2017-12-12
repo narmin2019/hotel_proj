@@ -9,6 +9,9 @@ class Home(View):
     def get(self, request):
         return render(request, "home.html", {'title': 'Top Hotels from view!'})
 
+    def post(self, request):
+        pass
+
 
 class Register(View):
     def get(self, request):
