@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.views.generic import View
-from .models import Hotel as HotelModel
+from .models import Hotel
 from django.http import HttpResponseNotFound
 # Create your views here.
 
 
 class Home(View):
     def get(self, request):
-        return render(request, "home.html", {'title': 'Top Hotels from view!'})
+        top_hotels = Hotel.objects.all()
+        return render(request, "home.html", {'title': 'Top Hotels from view!', 'hotels': top_hotels})
 
     def post(self, request):
         pass
@@ -24,10 +25,10 @@ class Login(View):
         return render(request, "login.html")
 
 
-class Hotel(View):
+class HotelDetails(View):
     def get(self, request, hotel_id):
         try:
-            hotel = HotelModel.objects.get(pk=int(hotel_id))
+            hotel = Hotel.objects.get(pk=int(hotel_id))
         except:
             return HttpResponseNotFound()
         else:

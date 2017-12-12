@@ -214,6 +214,7 @@
                 <p class="content-head">{{title}}</p>
             </div>
             <!--hotel cells: repeat etsen tekrarlanacaq bunu-->
+            {% for hotel in hotels %}
             <div class="col xl3 l3 m6 s12 rest-cell">
                 <div class="rest-container">
                     <div class="rest-img-container">
@@ -224,7 +225,7 @@
                 </div>
                 <div class="info-restaurant">
                     <h4 class="rest-card-title">
-                        <a href="javascript:void(0)">Absheron Hotel </a>
+                        <a href="javascript:void(0)">{{ hotel.name }}</a>
                     </h4>
                     <p class="rest-place">Baku.Azerbaijan</p>
                     <p class="card-rating">
@@ -242,6 +243,7 @@
                     <a href="javascript:void(0)" class="hotel-cost btn"><span>$</span>&nbsp;348</a>
                 </div>
             </div>
+            {% endfor %}
 
         </div>
         <!--the end of recently restaurant body-->
