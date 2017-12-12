@@ -219,7 +219,7 @@
                 <div class="rest-container">
                     <div class="rest-img-container">
                         <a href="javascript:void(0)">
-                            <img width="600" height="200" src="static/img/hotel-item.jpg" class="rest-image" alt="rest-img"/>
+                            <img width="600" height="200" src="{{ hotel.photo.url }}" class="rest-image" alt="rest-img"/>
                         </a>
                     </div>
                 </div>
@@ -227,7 +227,7 @@
                     <h4 class="rest-card-title">
                         <a href="javascript:void(0)">{{ hotel.name }}</a>
                     </h4>
-                    <p class="rest-place">Baku.Azerbaijan</p>
+                    <p class="rest-place">{{ hotel.region }}</p>
                     <p class="card-rating">
                        <span class="left">
                            <span class="rate-label">3.1</span>
@@ -240,7 +240,7 @@
                         <a href="javascript:void(0)" class="card-review-count right">2322 reviews</a>
                     </p>
                     <br> <br>
-                    <a href="javascript:void(0)" class="hotel-cost btn"><span>$</span>&nbsp;348</a>
+                    <a href="javascript:void(0)" class="hotel-cost btn"><span>₼</span>&nbsp;{{ hotel.price }}</a>
                 </div>
             </div>
             {% endfor %}

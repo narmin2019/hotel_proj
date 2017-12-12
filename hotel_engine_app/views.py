@@ -8,7 +8,7 @@ from django.http import HttpResponseNotFound
 class Home(View):
     def get(self, request):
         top_hotels = Hotel.objects.all()
-        return render(request, "home.html", {'title': 'Top Hotels from view!', 'hotels': top_hotels})
+        return render(request, "home.html", {'title': 'Top Hotels!', 'hotels': top_hotels})
 
     def post(self, request):
         pass
