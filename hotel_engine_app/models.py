@@ -30,7 +30,7 @@ class Hotel(models.Model):
     name = models.CharField(max_length=30, blank=False,verbose_name='Adı')
     region = models.CharField(max_length=30, blank=True)
     price = models.IntegerField(verbose_name='Qiymət')
-    photo = models.ImageField('Şəkil')
+    photo = models.ImageField(upload_to='/hotels/cover/', verbose_name='Şəkil')
     room_capacity = models.IntegerField(default=50, verbose_name="Nömrələrin sayı")
     guest_capacity = models.IntegerField(default=80, verbose_name="Nömrələrin sayı")
     contact_info = models.TextField(max_length=500, blank=True)

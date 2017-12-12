@@ -28,5 +28,4 @@ class Hotel(View):
         except:
             return HttpResponseNotFound()
         else:
-            return render(request, "hotel.html", {'hotel':hotel})
-
+            return render(request, "hotel.html", {'hotel': hotel})
