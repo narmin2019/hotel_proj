@@ -1,7 +1,11 @@
+from re import search
+
+from PIL.ImageShow import register
 from django.shortcuts import render
 from django.views.generic import View
 from .models import Hotel
 from django.http import HttpResponseNotFound
+from . import forms
 # Create your views here.
 
 
@@ -11,8 +15,13 @@ class Home(View):
         return render(request, "home.html", {'title': 'Top Hotels!', 'hotels': top_hotels})
 
     def post(self, request):
-        pass
-
+        form = forms.SearchForm(request.POST)
+        if form.is_valid():
+            form.clean()
+            search_region = form.cleaned_data['region']
+            if search_region:
+                found_hotels = Hotel.objects.filter(region__icontains=search_region)
+                return render(request, "home.html", {'title': 'Search Result', 'hotels': found_hotels})
 
 class Register(View):
     def get(self, request):

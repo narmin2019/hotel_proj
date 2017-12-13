@@ -169,7 +169,10 @@
                <div class="row search-cov">
                    <div class="col m12 rest-home rl-zero-padding left">
                        <h4 class="restaurant-head center-align hide-on-small-only hide-on-med-only">FIND THE HOTEl FITS YOUR MOST PRIVATE NIGHTS!</h4>
+                       <form method="post">
+                           {% csrf_token %}
                        <div class="row search-area z-depth-5">
+
                            <div class="col m3 input-field common-search">
                                <i class="material-icons prefix">search</i>
                                <input name="region" id="icon_prefix" type="text" class="validate" placeholder="Region">
@@ -179,13 +182,13 @@
                                    <li>
                                        <div class="datetime-picker picker_date">
                                            <p>From</p>
-                                           <input type="text" id="datetimepicker4" value="28 SEP 2017"/>
+                                           <input name="from_date" type="text" id="datetimepicker4" value="28 SEP 2017"/>
                                        </div>
                                    </li>
                                    <li>
                                        <div class="datetime-picker picker_date">
                                            <p>To</p>
-                                           <input type="text" id="datetimepicker5" value="28 SEP 2017"/>
+                                           <input name="to_date" type="text" id="datetimepicker5" value="28 SEP 2017"/>
                                            <i class="mdi mdi-calendar datetime-icon right"></i>
                                        </div>
                                    </li>
@@ -193,14 +196,16 @@
                            </div>
                            <div class="col m3 max-min-prize">
                                <ul>
-                                   <li><input  type="number" class="validate" placeholder="min prize"></li>
-                                   <li><input type="number" class="validate" placeholder="max prize"></li>
+                                   <li><input name="min_prise" type="number" class="validate" placeholder="min prize"></li>
+                                   <li><input name="max_prise" type="number" class="validate" placeholder="max prize"></li>
                                </ul>
                            </div>
                            <div class="col m2">
-                               <a href="javascript:void(0)" class="btn search_btn">Search</a>
+                               <input type="submit" class="btn search_btn" name="Search" value="Search">
+{#                               <a href="javascript:void(0)" class="btn search_btn">Search</a>#}
                            </div>
                        </div>
+                       </form>
                    </div>
                </div>
                 <!--the end of home content for restaurant-->
