@@ -1,0 +1,4 @@
+Django==1.11
+Pillow==4.3.0
+virtualenv==15.1.0
+whitenoise==3.3.1
