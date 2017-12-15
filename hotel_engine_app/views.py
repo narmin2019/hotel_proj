@@ -23,10 +23,10 @@ class Home(View):
                 found_hotels = Hotel.objects.filter(region__icontains=search_region)
                 return render(request, "home.html", {'title': 'Search Result', 'hotels': found_hotels})
 
+
 class Register(View):
     def get(self, request):
         return render(request, "register.html")
-
 
 
 class Login(View):
