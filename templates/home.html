@@ -173,27 +173,27 @@
                            {% csrf_token %}
                        <div class="row search-area z-depth-5">
 
-                           <div class="col m3 input-field common-search">
+                           <div class="col m7 input-field common-search">
                                <i class="material-icons prefix">search</i>
                                <input name="region" id="icon_prefix" type="text" class="validate" placeholder="Name or region">
                            </div>
-                           <div class="col m4 date-date rl-zero-padding">
-                               <ul class="date-time-picker picker_date_cover">
-                                   <li>
-                                       <div class="datetime-picker picker_date">
-                                           <p>From</p>
-                                           <input name="from_date" type="text" id="datetimepicker4" value="28 SEP 2017"/>
-                                       </div>
-                                   </li>
-                                   <li>
-                                       <div class="datetime-picker picker_date">
-                                           <p>To</p>
-                                           <input name="to_date" type="text" id="datetimepicker5" value="28 SEP 2017"/>
-                                           <i class="mdi mdi-calendar datetime-icon right"></i>
-                                       </div>
-                                   </li>
-                               </ul>
-                           </div>
+{#                           <div class="col m4 date-date rl-zero-padding">#}
+{#                               <ul class="date-time-picker picker_date_cover">#}
+{#                                   <li>#}
+{#                                       <div class="datetime-picker picker_date">#}
+{#                                           <p>From</p>#}
+{#                                           <input name="from_date" type="text" id="datetimepicker4" value="28 SEP 2017"/>#}
+{#                                       </div>#}
+{#                                   </li>#}
+{#                                   <li>#}
+{#                                       <div class="datetime-picker picker_date">#}
+{#                                           <p>To</p>#}
+{#                                           <input name="to_date" type="text" id="datetimepicker5" value="28 SEP 2017"/>#}
+{#                                           <i class="mdi mdi-calendar datetime-icon right"></i>#}
+{#                                       </div>#}
+{#                                   </li>#}
+{#                               </ul>#}
+{#                           </div>#}
                            <div class="col m3 max-min-prize">
                                <ul>
                                    <li><input name="min_prise" type="number" class="validate" placeholder="min prize"></li>
@@ -242,7 +242,7 @@
                            <span class="mdi mdi-star"></span>
                            <span class="mdi mdi-star-half"></span>
                        </span>
-                        <a href="javascript:void(0)" class="card-review-count right">2322 reviews</a>
+                        <a href="javascript:void(0)" class="card-review-count right">hotel.review reviews</a>
                     </p>
                     <br> <br>
                     <a href="javascript:void(0)" class="hotel-cost btn"><span>₼</span>&nbsp;{{ hotel.price }}</a>

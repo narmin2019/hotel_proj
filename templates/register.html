@@ -26,7 +26,7 @@
                 <a href="javascript:void(0)" class="button-collapse black-text"><i class="mdi mdi-menu"></i></a>
                 <ul class="hide-on-med-and-down menu-list">
                     <li>
-                        <a href="home.html">
+                        <a href="/">
                             <img src="/static/img/icons/logo.png" alt="logo" class="hotel-logo">
                         </a>
                     </li>
@@ -56,34 +56,37 @@
                     <div class="col xl12 l12 m12 s12 m-right z-depth-4">
                         <a href="javascript:void(0)" class="close-popup hide-on-large-only"><i class="mdi mdi-close black-text"></i></a>
                         <p class="login-right-title">Register now!</p>
-                        <form action="">
+                        <form method="post">
+                            {% csrf_token %}
+
                             <div class="input_field">
                                 <label>Name</label>
-                                <input placeholder="name" type="text" class="validate">
+                                <input name="name" placeholder="name" type="text" class="validate">
                             </div>
-                            <div class="input_field">
+                            {% comment %}<div class="input_field">
                                 <label>Phone</label>
                                 <input placeholder="+994" type="text" class="validate">
-                            </div>
+                            </div>{% endcomment %}
                             <div class="input_field">
                                 <label>Surname</label>
-                                <input placeholder="surname" type="text" class="validate">
+                                <input name="surname" placeholder="surname" type="text" class="validate">
                             </div>
                             <div class="input_field">
                                 <label>Email</label>
-                                <input placeholder="example@mail.ru" type="email" class="validate">
+                                <input name="email" placeholder="example@mail.ru" type="email" class="validate">
                             </div>
                             <div class="input_field">
                                 <label>Password</label>
-                                <input placeholder="password" type="password" class="validate">
+                                <input name="password" placeholder="password" type="password" class="validate">
                             </div>
+                             <input type="submit" class="btn log-btn" value="Register" /> <br>
+                        <p class="custom-log">
+                            <input name="ismanager" type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                            <label for="filled-in-box" class="left">I am a hotel manager</label>
+                        </p>
                         </form>
 
-                        <a href="javascript:void(0)" class="btn log-btn">Register</a> <br>
-                        <p class="custom-log">
-                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-                            <label for="filled-in-box" class="left">Are you manager?</label>
-                        </p>
+
                     </div>
                 </div>
             </div>

@@ -25,7 +25,7 @@
     </head>
     <body>
     <div class="row item_cover">
-        <p class="hotel-name">Hilton Hotel Budapest by Library Hotel Collection</p>
+        <p class="hotel-name">{{ hotel.name }}</p>
         <p class="card-rating">
                        <span class="left">
                            <!--mdi_star versen rengi sari olacaq-->
@@ -37,13 +37,13 @@
                            <!--mdi-star-half-->
                            <span class="mdi mdi_star"></span>
                        </span>
-            <a href="javascript:void(0)" class="card-review-count">2322 reviews</a>
+            <a href="javascript:void(0)" class="card-review-count">{{ hotel.review_set.count }} reviews</a>
         </p>
         <ul>
-            <li><p class="hotel-info"><i class="mdi mdi-map-marker-multiple"></i>5 Hercegprimas Street, Budapest 1051, Hungary</p></li>
-            <li><p class="hotel-info"><i class="mdi mdi-phone"></i>00 36 1 445 4055</p></li>
+            <li><p class="hotel-info"><i class="mdi mdi-map-marker-multiple"></i>{{ hotel.region }}</p></li>
+            <li><p class="hotel-info"><i class="mdi mdi-phone"></i>{{ hotel.contact_info }}</p></li>
         </ul>
-        <a href="javascript:void(0)" class="hotel-cost btn"><span>$</span>&nbsp;348</a>
+        <a href="javascript:void(0)" class="hotel-cost btn"><span>₼</span>&nbsp;{{ hotel.price }}</a>
     </div>
     <div class="row hotel-details">
         <div class="col m3 hotel-item-left">
@@ -86,7 +86,7 @@
             </form>
         </div>
         <div class="col m9 hotel-item-right">
-            <div class="hotel-img"></div>
+            <div class="hotel-img" style="background-image: url({{ hotel.photo.url }})"></div>
         </div>
     </div>
     <div class="row comment-part">

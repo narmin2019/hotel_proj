@@ -12,3 +12,11 @@ class SearchForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=30)
     password = forms.CharField(max_length=30)
+
+
+class RegisterForm(forms.Form):
+    name = forms.CharField(max_length=30)
+    surname = forms.CharField(max_length=30)
+    email = forms.EmailField()
+    password = forms.PasswordInput()
+    ismanager = forms.CheckboxInput()

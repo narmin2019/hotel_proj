@@ -1,12 +1,14 @@
 from re import search
 
 from PIL.ImageShow import register
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import View
-from .models import Hotel
 from django.http import HttpResponseNotFound
 from . import forms
 from django.db.models import Q
+from django.contrib.auth.models import User as SystemUser
+from django.contrib.auth.forms import UserCreationForm
+from .models import *
 # Create your views here.
 
 
@@ -28,7 +30,29 @@ class Home(View):
 
 class Register(View):
     def get(self, request):
-        return render(request, "register.html")
+        form = UserCreationForm()
+        return render(request, "register.html", {'form':form})
+
+    def post(self, request):
+        form = forms.RegisterForm(request.POST)
+        if form.is_valid():
+            form.clean()
+            name = form.cleaned_data.get('name')
+            surname = form.cleaned_data.get('surname')
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            ismanager = form.cleaned_data.get('ismanager')
+
+            if ismanager:
+                pass
+            else:
+                user = SystemUser.objects.create_user(username=email, email=email, password=password, first_name=name,
+                                                      last_name=surname)
+                new_customer = Customer.objects.create(user=user)
+                new_customer.save()
+                return redirect('login')
+                pass
+
 
 
 class Login(View):
