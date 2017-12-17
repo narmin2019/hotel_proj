@@ -11,15 +11,15 @@
         <meta name="distribution" content="global"/>
         <meta name="content-language" content="en"/>
         <meta name="language" content="en"/>
-        <link rel="stylesheet" href="static/css/materialize.min.css"/>
+        <link rel="stylesheet" href="/static/css/materialize.min.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-        <link rel="stylesheet" href="static/css/materialdesignicons.min.css"/>
-        <link rel="shortcut icon" href="static/img/icons/fav.png" type="image/x-icon"/>
-        <link type="text/css" href="static/css/style.css" rel="stylesheet"/>
-        <link type="text/css" href="static/css/responsive.css" rel="stylesheet"/>
-        <link type="text/css" href="static/css/jquery.datetimepicker.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="/static/css/materialdesignicons.min.css"/>
+        <link rel="shortcut icon" href="/static/img/icons/fav.png" type="image/x-icon"/>
+        <link type="text/css" href="/static/css/style.css" rel="stylesheet"/>
+        <link type="text/css" href="/static/css/responsive.css" rel="stylesheet"/>
+        <link type="text/css" href="/static/css/jquery.datetimepicker.css" rel="stylesheet"/>
         <!--select2-->
-        <link type="text/css" href="static/select2/css/select2.css" rel="stylesheet"/>
+        <link type="text/css" href="/static/select2/css/select2.css" rel="stylesheet"/>
     </head>
     <body>
         <!--the start of restaurant-home-->
@@ -30,12 +30,12 @@
                         <a href="javascript:void(0)" data-activates="mobile-demo" class="button-collapse black-text"><i class="mdi mdi-menu"></i></a>
 
                         <a href="javascript:void(0)" data-activates="mobile-demo" class="logo-text hide-on-large-only">
-                            <img src="static/img/icons/logo.png" alt="logo"></a>
+                            <img src="/static/img/icons/logo.png" alt="logo"></a>
 
                         <ul class="hide-on-med-and-down menu-list">
                             <li>
                                 <a href="javascript:void(0)">
-                                    <img src="static/img/icons/logo.png" alt="logo" class="hotel-logo">
+                                    <img src="/static/img/icons/logo.png" alt="logo" class="hotel-logo">
                                 </a>
                             </li>
                             <li><a href="javascript:void(0)" class="active">Hotels</a></li>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="row mobile-username">
                                 <a href="javascript:void(0)">
-                                    <img class="user-img" src="static/img/icons/account-circle.svg" alt="user-img">
+                                    <img class="user-img" src="/static/img/icons/account-circle.svg" alt="user-img">
                                     <span>Nuriyya Ruslanova</span>
                                 </a>
                             </div>
@@ -230,7 +230,7 @@
                 </div>
                 <div class="info-restaurant">
                     <h4 class="rest-card-title">
-                        <a href="javascript:void(0)">{{ hotel.name }}</a>
+                        <a href="hotel/{{hotel.id}}">{{ hotel.name }}</a>
                     </h4>
                     <p class="rest-place">{{ hotel.region }}</p>
                     <p class="card-rating">
@@ -260,14 +260,14 @@
             </div>
         </div>
         <a href="#" class="scrollToTop mdi mdi-chevron-up" style="text-decoration: none; display: inline;"></a>
-        <script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="/static/js/jquery-3.1.1.min.js"></script>
     <!--material design js-->
-    <script type="text/javascript" src="static/js/materialize.min.js"></script>
+    <script type="text/javascript" src="/static/js/materialize.min.js"></script>
     <!--own js file-->
-    <script type="text/javascript" src="static/js/main.js"></script>
-    <script type="text/javascript" src="static/js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.datetimepicker.full.min.js"></script>
     <!--select2-->
-    <script src="static/select2/js/select2.min.js"></script>
+    <script src="/static/select2/js/select2.min.js"></script>
 
 </body>
 </html>
