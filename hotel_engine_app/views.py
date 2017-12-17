@@ -6,6 +6,7 @@ from django.views.generic import View
 from .models import Hotel
 from django.http import HttpResponseNotFound
 from . import forms
+from django.db.models import Q
 # Create your views here.
 
 
@@ -20,7 +21,8 @@ class Home(View):
             form.clean()
             search_region = form.cleaned_data['region']
             if search_region:
-                found_hotels = Hotel.objects.filter(region__icontains=search_region)
+                q = Q(region__icontains=search_region) | Q(name__icontains=search_region)
+                found_hotels = Hotel.objects.filter(q)
                 return render(request, "home.html", {'title': 'Search Result', 'hotels': found_hotels})
 
 
