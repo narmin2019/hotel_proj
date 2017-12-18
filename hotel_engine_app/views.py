@@ -8,6 +8,8 @@ from . import forms
 from django.db.models import Q
 from django.contrib.auth.models import User as SystemUser
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import authenticate, login, logout as django_logout
+
 from .models import *
 # Create your views here.
 
@@ -50,14 +52,33 @@ class Register(View):
                                                       last_name=surname)
                 new_customer = Customer.objects.create(user=user)
                 new_customer.save()
-                return redirect('login')
-                pass
-
+                authenticate(request, username=new_customer.user.username, password=new_customer.user.password)
+                login(request, user)
+                return redirect('home')
 
 
 class Login(View):
     def get(self, request):
         return render(request, "login.html")
+
+    def post(self, request):
+        form = forms.LoginForm(request.POST)
+        if form.is_valid():
+            form.clean()
+            email = form.cleaned_data.get('email')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=email, password=password)
+
+            if user is not None:
+                login(request, user)
+                customer = Customer.objects.filter(user=user).first()
+                if customer:
+                    return redirect('home')
+                elif user.is_staff:
+                    return redirect('admin/login')
+            return render(request, 'login.html', {'title': 'Invalid email or password. Try again'})
+        else:
+            return render(request, 'login.html', {'title': 'Please enter email and password to login'})
 
 
 class HotelDetails(View):
@@ -68,3 +89,9 @@ class HotelDetails(View):
             return HttpResponseNotFound()
         else:
             return render(request, "hotel.html", {'hotel': hotel})
+
+
+def logout(request):
+    if request.user.is_authenticated:
+        django_logout(request)
+        return redirect('login')
