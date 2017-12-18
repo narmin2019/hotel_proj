@@ -39,6 +39,13 @@ class Hotel(models.Model):
         verbose_name='Otel'
         verbose_name_plural='Otellər'
 
+    def rating(self):
+        count = self.review_set.count()
+        if count == 0:
+            return 0
+        sum = sum(map(lambda x:x.rate,self.review_set.all()))
+        return int(sum/count)
+
     def __str__(self):
         return self.name
 

@@ -34,7 +34,7 @@
 
                         <ul class="hide-on-med-and-down menu-list">
                             <li>
-                                <a href="javascript:void(0)">
+                                <a href="/">
                                     <img src="/static/img/icons/logo.png" alt="logo" class="hotel-logo">
                                 </a>
                             </li>
@@ -241,13 +241,14 @@
                     <p class="card-rating">
                        <span class="left">
                            <span class="rate-label">3.1</span>
+
                            <span class="mdi mdi-star"></span>
                            <span class="mdi mdi-star"></span>
                            <span class="mdi mdi-star"></span>
                            <span class="mdi mdi-star"></span>
                            <span class="mdi mdi-star-half"></span>
                        </span>
-                        <a href="javascript:void(0)" class="card-review-count right">hotel.review reviews</a>
+                        <a href="javascript:void(0)" class="card-review-count right">{{ hotel.review_set.count }} reviews</a>
                     </p>
                     <br> <br>
                     <a href="javascript:void(0)" class="hotel-cost btn"><span>₼</span>&nbsp;{{ hotel.price }}</a>
