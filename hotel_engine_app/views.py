@@ -92,7 +92,6 @@ class HotelDetails(View):
 
 
 def logout(request):
-    if request.user.is_authenticated:
         django_logout(request)
         return redirect('login')
 
