@@ -27,7 +27,7 @@ class Manager(models.Model):
 
 class Hotel(models.Model):
     manager = models.ForeignKey(Manager, on_delete=models.CASCADE, verbose_name='Otelin meneceri')
-    name = models.CharField(max_length=30, blank=False,verbose_name='Adı')
+    name = models.CharField(max_length=30, blank=False, verbose_name='Adı')
     region = models.CharField(max_length=250, blank=True)
     price = models.IntegerField(verbose_name='Qiymət')
     photo = models.ImageField(upload_to='hotels/cover/', verbose_name='Şəkil')

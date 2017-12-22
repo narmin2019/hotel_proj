@@ -95,3 +95,7 @@ def logout(request):
     if request.user.is_authenticated:
         django_logout(request)
         return redirect('login')
+
+
+def badmethod(request):
+    pass#return render('home.html', {'title':??})
